@@ -7,6 +7,7 @@ import java.util.Scanner;
  * check whether the number is a factorial 
  * or prime number
  * or fibonacci number
+ * or factorial number
  * or even number
  * or power of 2
  * or power of 3
@@ -28,6 +29,10 @@ public class PowerOf3 {
 
     static boolean isPowerOf3(int number) {
         // Generate all the power of 3 less than the number
-        
+        int power = 1;
+        while (power < number) {
+            number *= 3;
+        }
+        return (power == number) ? true : false;
     }
 }
